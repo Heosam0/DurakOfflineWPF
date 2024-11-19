@@ -286,6 +286,12 @@ namespace Fool
                 player.Add(deck[0]);
                 deck.RemoveAt(0);
             }
+            if(deck.Count == 0 && player.Count == 0)
+            {
+                MessageBox.Show("Вы победили!");
+                new MainWindow().Show();
+                this.Close();
+            }
             deck_counter.Content = deck.Count;
         }
 
